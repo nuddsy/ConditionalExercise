@@ -7,10 +7,10 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.printf("Input num1 (Int): \n");
+        System.out.printf("Input num1 (Int): ");
         String num1Str = scanner.nextLine();
 
-        System.out.printf("Input num2 (Int): \n");
+        System.out.printf("Input num2 (Int): ");
         String num2Str = scanner.nextLine();
 
         try {
@@ -25,6 +25,16 @@ public class Main {
             else {
                 System.out.println("They're the same");
             }
+
+            System.out.printf("Please input num3 (Int): ");
+            String num3Str = scanner.nextLine();
+            int num3 = Integer.parseInt(num3Str);
+            if (num3 % 2 == 0) {
+                System.out.println("num3 is even: " + num3);
+            } else {
+                System.out.println("num3 is odd: " + num3);
+            }
+
         } catch (NumberFormatException e) {
             System.out.println("Invalid integer");
         }
