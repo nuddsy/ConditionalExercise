@@ -38,5 +38,25 @@ public class Main {
         } catch (NumberFormatException e) {
             System.out.println("Invalid integer");
         }
+
+        boolean solved = false;
+
+        while (!solved) {
+            System.out.println("Please input a traffic light colour (r,y,g): ");
+            String trafficColour = scanner.nextLine();
+            if (trafficColour.equals("r")) {
+                System.out.println("Red (r) means stop");
+                solved = true;
+            } else if (trafficColour.equals("y")) {
+                System.out.println("Yellow/Amber (y) means slow");
+                solved = true;
+            } else if (trafficColour.equals("g")) {
+                System.out.println("Green (g) means go");
+                solved = true;
+            } else {
+                System.out.println("Invalid input, please input again.");
+            }
+        }
+
     }
 }
